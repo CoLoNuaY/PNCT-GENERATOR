@@ -51,7 +51,8 @@
 </head>
 <body>
   <h1>สุ่มเหตุการณ์ใน PICNIC CARTOON</h1>
-  <p>กดปุ่มด้านล่างเพื่อสุ่ม</p>
+  <p>กดปุ่มด้านล่างเพื่อสุ่ม</p><br>
+<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" alt="Uploaded Image">
   <button id="generateBtn">สุ่มเลย!</button>
   <div id="result"></div>
 
