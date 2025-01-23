@@ -51,8 +51,7 @@
 </head>
 <body>
   <h1>สุ่มเหตุการณ์ใน PICNIC CARTOON</h1>
-  <p>กดปุ่มด้านล่างเพื่อสุ่ม</p><br>
-<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" alt="Uploaded Image">
+  <p>กดปุ่มด้านล่างเพื่อสุ่ม</p>
   <button id="generateBtn">สุ่มเลย!</button>
   <div id="result"></div>
 
@@ -70,7 +69,7 @@
     // รายการการกระทำ
     const actions = [
       "กินข้าวกับ", "นั่งสนทนากับ", "เดินทางไปเที่ยวกับ", "เล่นเกมกับ", "วิ่งแข่งกับ",
-      "เรียนหนังสือกับ", "ร้องเพลงคู่กับ", "วาดภาพกับ", "ทำอาหารกับ", "สำรวจป่ากับ", "ตบตูด", "เตะตูด", "ให้ดอกไม้", "กัด", "ต่อยกับ", "เผา"
+      "เรียนหนังสือกับ", "ร้องเพลงคู่กับ", "วาดภาพกับ", "ทำอาหารกับ", "สำรวจป่ากับ", "ตบตูด", "เตะตูด", "ให้ดอกไม้", "กัด", "ต่อยกับ", "เผา", "นอนกับ", "ดูหนังกับ", "เล่นเกมกระดานกับ", "เล่นเกมการ์ดกับ", "จูบกับ", "ตบหัว", "ทำแผลให้", "ยืนมอง", "ส่งจดหมายรักให้", ซื้อของ ของ",
     ];
 
     function generatePair() {
