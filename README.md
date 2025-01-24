@@ -8,44 +8,67 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
+      background-color: #000; /* สีพื้นหลังดำ */
+      color: #fff; /* สีตัวอักษรขาว */
       text-align: center;
       padding: 20px;
     }
 
     h1 {
       font-size: 2rem;
-      color: #555;
+      color: #f0f0f0; /* สีหัวข้อขาวนวล */
+      margin-bottom: 10px;
+    }
+
+    p, a {
+      font-size: 1rem;
+      color: #ccc; /* สีข้อความรอง */
+      margin: 5px 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: #1e90ff; /* สีลิงก์ฟ้า */
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
 
     button {
-      background-color: #000;
-      color: #fff;
+      background-color: #fff;
+      color: #000;
       border: none;
       padding: 10px 20px;
       font-size: 1rem;
       border-radius: 5px;
       cursor: pointer;
       margin-top: 20px;
-      transition: background-color 0.3s;
+      transition: background-color 0.3s, color 0.3s;
     }
 
     button:hover {
       background-color: #333;
+      color: #fff;
     }
 
     #result {
       margin-top: 20px;
       font-size: 1.5rem;
-      color: #000;
       font-weight: bold;
+      color: #fff;
       opacity: 1;
       transition: opacity 0.5s ease-in-out;
     }
 
     .hidden {
       opacity: 0;
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 0.9rem;
+      color: #ccc;
     }
   </style>
 </head>
@@ -54,6 +77,20 @@
   <p>กดปุ่มด้านล่างเพื่อสุ่ม</p>
   <button id="generateBtn">สุ่มเลย!</button>
   <div id="result"></div>
+  
+  <p>
+    <strong>YOUTUBE PICNIC CARTOON:</strong><br>
+    <a href="https://youtube.com/@picniccartoon?si=2KwwhL5_45kM1Btc" target="_blank">https://youtube.com/@picniccartoon?si=2KwwhL5_45kM1Btc</a>
+  </p>
+
+  <p>
+    <strong>ผู้สร้างและผู้เขียนโค๊ด:</strong><br>
+    <a href="https://x.com/BAICLOVE?t=yPv2jYpxb9yVzkUiyAe36A&s=09" target="_blank">โคลเวอร์</a>
+  </p>
+
+  <footer>
+    <p>V.0.2</p>
+  </footer>
 
   <script>
     // รายการชื่อ
