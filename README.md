@@ -86,7 +86,8 @@
     <div id="name1" class="result-box">---</div>
     <div id="action" class="result-box">---</div>
     <div id="name2" class="result-box">---</div>
-  </div><hr>
+  </div>
+<hr>
 <br>
   <p>
     <strong>YOUTUBE PICNIC CARTOON:</strong><br>
