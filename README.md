@@ -80,12 +80,12 @@
   
   <p>
     <strong>YOUTUBE PICNIC CARTOON:</strong><br>
-    <a href="https://youtube.com/@picniccartoon?si=2KwwhL5_45kM1Btc" target="_blank">https://youtube.com/@picniccartoon?si=2KwwhL5_45kM1Btc</a>
+    <a><href="https://youtube.com/@picniccartoon?si=2KwwhL5_45kM1Btc" target="_blank">https://youtube.com/@picniccartoon?si=2KwwhL5_45kM1Btc</a>
   </p>
 
   <p>
     <strong>ผู้สร้างและผู้เขียนโค๊ด:</strong><br>
-    <a href="https://x.com/BAICLOVE?t=yPv2jYpxb9yVzkUiyAe36A&s=09" target="_blank">โคลเวอร์</a>
+    <a> <href="https://x.com/BAICLOVE?t=yPv2jYpxb9yVzkUiyAe36A&s=09" target="_blank">โคลเวอร์</a>
   </p>
 
   <footer>
