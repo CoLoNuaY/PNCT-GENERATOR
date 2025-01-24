@@ -76,18 +76,12 @@
   <h1>สุ่มเหตุการณ์ใน PICNIC CARTOON</h1>
   <p>กดปุ่มด้านล่างเพื่อสุ่ม</p>
   <button id="generateBtn">สุ่มเลย!</button>
-  <div id="result"></div>
+  <div id="result"></div><hr>
   
-  <p>
-    <strong>YOUTUBE PICNIC CARTOON:</strong><br>
-    <a><href="https://youtube.com/@picniccartoon?si=2KwwhL5_45kM1Btc" target="_blank">https://youtube.com/@picniccartoon?si=2KwwhL5_45kM1Btc</a>
-  </p>
-
-  <p>
-    <strong>ผู้สร้างและผู้เขียนโค๊ด:</strong><br>
-    <a> <href="https://x.com/BAICLOVE?t=yPv2jYpxb9yVzkUiyAe36A&s=09" target="_blank">โคลเวอร์</a>
-  </p>
-
+<center><h1>YOUTUBE PICNIC CARTOON:</h1></center><br>
+https://youtube.com/@picniccartoon?si=2KwwhL5_45kM1Btc<hr>
+<center><h1>ผู้สร้างและผู้เขียนโค๊ด:</h1></center><br>
+https://x.com/BAICLOVE?t=yPv2jYpxb9yVzkUiyAe36A&s=09
   <footer>
     <p>V.0.2</p>
   </footer>
