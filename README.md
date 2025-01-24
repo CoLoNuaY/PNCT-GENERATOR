@@ -86,8 +86,8 @@
     <div id="name1" class="result-box">---</div>
     <div id="action" class="result-box">---</div>
     <div id="name2" class="result-box">---</div>
-  </div>
-
+  </div><hr>
+<br>
   <p>
     <strong>YOUTUBE PICNIC CARTOON:</strong><br>
     <a href="https://youtube.com/@picniccartoon?si=2KwwhL5_45kM1Btc" target="_blank">https://youtube.com/@picniccartoon?si=2KwwhL5_45kM1Btc</a>
