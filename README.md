@@ -52,6 +52,7 @@
 <body>
   <h1>สุ่มเหตุการณ์ใน PICNIC CARTOON</h1>
   <p>กดปุ่มด้านล่างเพื่อสุ่ม</p>
+  <img src ="
   <button id="generateBtn">สุ่มเลย!</button>
   <div id="result"></div>
 
