@@ -16,19 +16,19 @@
 
     h1 {
       font-size: 2rem;
-      color: #f0f0f0; /* สีหัวข้อขาวนวล */
+      color: #f0f0f0;
       margin-bottom: 10px;
     }
 
     p, a {
       font-size: 1rem;
-      color: #ccc; /* สีข้อความรอง */
+      color: #ccc;
       margin: 5px 0;
     }
 
     a {
       text-decoration: none;
-      color: #1e90ff; /* สีลิงก์ฟ้า */
+      color: #1e90ff;
     }
 
     a:hover {
@@ -52,17 +52,23 @@
       color: #fff;
     }
 
-    #result {
+    #result-container {
+      display: flex;
+      flex-direction: column; /* เปลี่ยนเป็นแนวตั้ง */
+      align-items: center;
+      gap: 10px;
       margin-top: 20px;
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #fff;
-      opacity: 1;
-      transition: opacity 0.5s ease-in-out;
     }
 
-    .hidden {
-      opacity: 0;
+    .result-box {
+      background-color: #000;
+      color: #fff;
+      border: 2px solid #fff; /* ขอบสีขาว */
+      padding: 20px;
+      width: 200px;
+      text-align: center;
+      font-size: 1rem;
+      font-weight: bold;
     }
 
     footer {
@@ -76,8 +82,12 @@
   <h1>สุ่มเหตุการณ์ใน PICNIC CARTOON</h1>
   <p>กดปุ่มด้านล่างเพื่อสุ่ม</p>
   <button id="generateBtn">สุ่มเลย!</button>
-  <div id="result"></div>
-  
+  <div id="result-container">
+    <div id="name1" class="result-box">---</div>
+    <div id="action" class="result-box">---</div>
+    <div id="name2" class="result-box">---</div>
+  </div>
+
   <p>
     <strong>YOUTUBE PICNIC CARTOON:</strong><br>
     <a href="https://youtube.com/@picniccartoon?si=2KwwhL5_45kM1Btc" target="_blank">https://youtube.com/@picniccartoon?si=2KwwhL5_45kM1Btc</a>
@@ -109,29 +119,36 @@
       "เรียนหนังสือกับ", "ร้องเพลงคู่กับ", "วาดภาพกับ", "ทำอาหารกับ", "สำรวจป่ากับ", "ตบตูด", "เตะตูด", "ให้ดอกไม้", "กัด", "ต่อยกับ", "เผา", "นอนกับ", "ดูหนังกับ", "เล่นเกมกระดานกับ", "เล่นเกมการ์ดกับ", "จูบกับ", "ตบหัว", "ทำแผลให้", "ยืนมอง", "ส่งจดหมายรักให้", "ซื้อของของ"
     ];
 
-    function generatePair() {
-      const resultElement = document.getElementById("result");
-
-      // แสดงข้อความระหว่างรอสุ่ม
-      resultElement.innerText = "กำลังสุ่ม...";
-      resultElement.classList.remove("hidden");
-
-      // รอ 500ms เพื่อสร้างเอฟเฟกต์การสุ่ม
-      setTimeout(() => {
-        // สุ่มชื่อและการกระทำ
-        const randomName1 = names[Math.floor(Math.random() * names.length)];
-        let randomName2;
-        do {
-          randomName2 = names[Math.floor(Math.random() * names.length)];
-        } while (randomName1 === randomName2);
-        const randomAction = actions[Math.floor(Math.random() * actions.length)];
-
-        // แสดงผลลัพธ์
-        resultElement.innerText = `${randomName1} ${randomAction} ${randomName2}`;
-      }, 500);
+    function randomArrayItem(array) {
+      return array[Math.floor(Math.random() * array.length)];
     }
 
-    // เพิ่ม Event Listener ให้ปุ่ม
+    function generatePair() {
+      const name1Element = document.getElementById("name1");
+      const actionElement = document.getElementById("action");
+      const name2Element = document.getElementById("name2");
+
+      let interval = setInterval(() => {
+        name1Element.innerText = randomArrayItem(names);
+        actionElement.innerText = randomArrayItem(actions);
+        name2Element.innerText = randomArrayItem(names);
+      }, 100); // ชื่อสุ่มเร็ว
+
+      setTimeout(() => {
+        clearInterval(interval);
+        const randomName1 = randomArrayItem(names);
+        let randomName2;
+        do {
+          randomName2 = randomArrayItem(names);
+        } while (randomName1 === randomName2);
+        const randomAction = randomArrayItem(actions);
+
+        name1Element.innerText = randomName1;
+        actionElement.innerText = randomAction;
+        name2Element.innerText = randomName2;
+      }, 2000); // หยุดหลัง 2 วินาที
+    }
+
     document.getElementById("generateBtn").addEventListener("click", generatePair);
   </script>
 </body>
