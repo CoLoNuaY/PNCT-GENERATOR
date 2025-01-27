@@ -117,57 +117,65 @@
     </footer>
   </div>
 
-  <script>
-    // รายการตัวละคร
-    const names = [
-      "สมศักดิ์", "ภูวฤทธิ์", "เจษฎา", "อรุณกร", "เรืองศักดิ์", "จิรเมธ", "กฤตรัตน์",
-      "คาปูชิโน่", "มัคคิอาโต้", "ลาเต้", "มอคค่า", "มานาซิโอ้", "ราซารัส", "การิคการี่",
-      "อลันตั้น", "ท่านผู้ถ่ายทอด", "ท่านหมายเลข 1", "ชูการ์", "ชานนท์", "ภีมพิพัฒน์",
-      "จันทรา", "ราตรี", "มนตรา", "คุโรบะ", "อุงกะอุงกะ", "แบงค์", "ไหมทอง", "ศรเพชร",
-      "มาริสา", "ชาดเพชร", "เอลเลียต", "นรเนศ", "ณเรศ", "ดนุเดช", "ชวิน", "รัชชานนท์",
-      "วาคิม", "นครินทร์", "ครูวรรลพ", "ดำ", "แดง", "ชมพู", "น้ำเงิน", "เหลือง", 
-      "มานิตย์", "ไซฟาเรียส", "เดลันเต้", "ครูวรรบวก", "คุณ"
-    ];
+ <script>
+  // รายการตัวละคร
+  const names = [
+    "สมศักดิ์", "ภูวฤทธิ์", "เจษฎา", "อรุณกร", "เรืองศักดิ์", "จิรเมธ", "กฤตรัตน์",
+    "คาปูชิโน่", "มัคคิอาโต้", "ลาเต้", "มอคค่า", "มานาซิโอ้", "ราซารัส", "การิคการี่",
+    "อลันตั้น", "ท่านผู้ถ่ายทอด", "ท่านหมายเลข 1", "ชูการ์", "ชานนท์", "ภีมพิพัฒน์",
+    "จันทรา", "ราตรี", "มนตรา", "คุโรบะ", "อุงกะอุงกะ", "แบงค์", "ไหมทอง", "ศรเพชร",
+    "มาริสา", "ชาดเพชร", "เอลเลียต", "นรเนศ", "ณเรศ", "ดนุเดช", "ชวิน", "รัชชานนท์",
+    "วาคิม", "นครินทร์", "ครูวรรลพ", "ดำ", "แดง", "ชมพู", "น้ำเงิน", "เหลือง",
+    "มานิตย์", "ไซฟาเรียส", "เดลันเต้", "ครูวรรบวก", "คุณ", "เพน", "บอลลีวูดแมน",
+    "ซินเทียน", "ชีตาห์", "พยัคฆ์สีคราม", "สอง"
+  ];
 
-    // รายการเหตุการณ์
-    const actions = [
-      "จับตูด", "ตกปลา", "ทำอาหาร", "ลูบหัว", "แอบส่องโทรศัพท์", "วาดรูปให้",
-      "ขโมยรองเท้าของ", "กินหมาของ", "ขโมยมะขามของสมศักดิ์ไปให้", "เลียขา",
-      "ปาหินใส่", "กินข้าวกับ", "นั่งสนทนากับ", "เดินทางไปเที่ยวกับ", "เล่นเกมกับ",
-      "วิ่งแข่งกับ", "เรียนหนังสือกับ", "ร้องเพลงคู่กับ", "วาดภาพกับ", "ทำอาหารกับ"
-    ];
+  // รายการเหตุการณ์
+  const actions = [
+    "จับตูด", "ตกปลา", "ทำอาหาร", "ลูบหัว", "แอบส่องโทรศัพท์", "วาดรูปให้",
+    "ขโมยรองเท้าของ", "กินหมาของ", "ขโมยมะขามของสมศักดิ์ไปให้", "เลียขา",
+    "ปาหินใส่", "กินข้าวกับ", "นั่งสนทนากับ", "เดินทางไปเที่ยวกับ", "เล่นเกมกับ",
+    "วิ่งแข่งกับ", "เรียนหนังสือกับ", "ร้องเพลงคู่กับ", "วาดภาพกับ", "ทำอาหารกับ",
+    "เจาะยาง", "ตีดอทกับ", "ตอกไข่", "จับแต่งหญิงให้", "เรียกพวกรุมกระทืบ", "จีบ",
+    "ให้ตัง", "เล่นเกมการ์ดแพ้", "จุ๊บเหม่ง", "เล่น russian roulette",
+    "กินแหลกกับ", "หยุมหัว", "ตีป้อมกับ", "ลงดันกับ", "ทำเควสกับ", "กินกับ",
+    "เปิดแอร์ดับร้อนกับ", "หนีภูเขาไฟระเบิดกับ", "ไปนอนบ้านของ", "ขับจักรยานกับ",
+    "พูดหนมน้าใส่", "กัด", "แต่งหน้าให้", "เล่นน้ำสงกรานต์กับ", "ขโมยของ", "กิน",
+    "ระเบิดบ้านของ", "เรียกสแตนมาสู้กับ", "คุยเรื่องธุรกิจร้านวินเทจของเอเลียตกับ",
+    "เลียหน้า", "ปะแป้ง", "ลอกการบ้าน", "วิ่งหนี"
+  ];
 
-    function randomArrayItem(array) {
-      return array[Math.floor(Math.random() * array.length)];
-    }
+  function randomArrayItem(array) {
+    return array[Math.floor(Math.random() * array.length)];
+  }
 
-    function generatePair() {
-      const name1Element = document.getElementById("name1");
-      const actionElement = document.getElementById("action");
-      const name2Element = document.getElementById("name2");
+  function generatePair() {
+    const name1Element = document.getElementById("name1");
+    const actionElement = document.getElementById("action");
+    const name2Element = document.getElementById("name2");
 
-      let interval = setInterval(() => {
-        name1Element.innerText = randomArrayItem(names);
-        actionElement.innerText = randomArrayItem(actions);
-        name2Element.innerText = randomArrayItem(names);
-      }, 100);
+    let interval = setInterval(() => {
+      name1Element.innerText = randomArrayItem(names);
+      actionElement.innerText = randomArrayItem(actions);
+      name2Element.innerText = randomArrayItem(names);
+    }, 100);
 
-      setTimeout(() => {
-        clearInterval(interval);
-        const randomName1 = randomArrayItem(names);
-        let randomName2;
-        do {
-          randomName2 = randomArrayItem(names);
-        } while (randomName1 === randomName2);
-        const randomAction = randomArrayItem(actions);
+    setTimeout(() => {
+      clearInterval(interval);
+      const randomName1 = randomArrayItem(names);
+      let randomName2;
+      do {
+        randomName2 = randomArrayItem(names);
+      } while (randomName1 === randomName2);
+      const randomAction = randomArrayItem(actions);
 
-        name1Element.innerText = randomName1;
-        actionElement.innerText = randomAction;
-        name2Element.innerText = randomName2;
-      }, 2000);
-    }
+      name1Element.innerText = randomName1;
+      actionElement.innerText = randomAction;
+      name2Element.innerText = randomName2;
+    }, 2000);
+  }
 
-    document.getElementById("generateBtn").addEventListener("click", generatePair);
-  </script>
+  document.getElementById("generateBtn").addEventListener("click", generatePair);
+</script>
 </body>
 </html>
