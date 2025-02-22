@@ -112,7 +112,7 @@
       <a href="https://x.com/BAICLOVE?t=yPv2jYpxb9yVzkUiyAe36A&s=09" target="_blank">โคลเวอร์</a>
     </p>
     <footer>
-      <p>V.0.4</p>
+      <p>V.0.5</p>
     </footer>
   </div>
 
