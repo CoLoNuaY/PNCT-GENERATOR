@@ -127,9 +127,6 @@
     <button onclick="changeTheme('theme-whitedark')">ขาวดำ</button>
     <button onclick="changeTheme('theme-firewater')">น้ำกับไฟ</button>
     <button onclick="changeTheme('theme-cyber')">ไซเบอร์</button>
-
-   <hr>
-<br>
     <p>  
       <strong>YOUTUBE PICNIC CARTOON:</strong><br>  
       <a href="https://youtube.com/@picniccartoon?si=2KwwhL5_45kM1Btc" target="_blank">พี่ปิคนิค</a>  
@@ -137,13 +134,11 @@
     <p>  
       <strong>ผู้สร้างและผู้เขียนโค๊ด:</strong><br>  
       <a href="https://x.com/BAICLOVE?t=yPv2jYpxb9yVzkUiyAe36A&s=09" target="_blank">โคลเวอร์</a>  
-    </p> 
-    <footer>
-      <p>V.0.6</p>
-    </footer>
-  </div>
-
-  <script>
+    </p>  
+    <footer>  
+      <p>V.0.6</p>  
+    </footer>  
+  </div>   <script>
       // รายการตัวละคร
   const names = [
     "สมศักดิ์", "ภูวฤทธิ์", "เจษฎา", "อรุณกร", "เรืองศักดิ์", "จิรเมธ", "กฤตรัตน์",
