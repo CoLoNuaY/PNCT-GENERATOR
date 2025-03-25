@@ -8,15 +8,14 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, #1e90ff, #ff4500); /* ธีมน้ำกับไฟ */
-      color: #fff;
       text-align: center;
       padding: 20px;
+      transition: background 0.5s, color 0.5s;
     }
 
     .main-container {
-      background: rgba(0, 0, 0, 0.6); /* พื้นหลังโปร่งแสง */
-      border: 5px solid #fff; /* กรอบสีขาว */
+      background: rgba(0, 0, 0, 0.6);
+      border: 5px solid #fff;
       padding: 20px;
       border-radius: 10px;
       display: inline-block;
@@ -27,41 +26,26 @@
 
     h1 {
       font-size: 2rem;
-      color: #fff;
       text-shadow: 2px 2px 5px #000;
-      margin-bottom: 10px;
     }
 
     p, a {
       font-size: 1rem;
-      color: #ccc;
       margin: 5px 0;
     }
 
     a {
       text-decoration: none;
-      color: #ffdd00;
-    }
-
-    a:hover {
-      text-decoration: underline;
     }
 
     button {
-      background-color: #fff;
-      color: #000;
       border: none;
-      padding: 10px 20px;
+      padding: 10px 15px;
       font-size: 1rem;
       border-radius: 5px;
       cursor: pointer;
-      margin-top: 20px;
+      margin: 5px;
       transition: background-color 0.3s, color 0.3s;
-    }
-
-    button:hover {
-      background-color: #333;
-      color: #fff;
     }
 
     #result-container {
@@ -73,10 +57,8 @@
     }
 
     .result-box {
-      background: rgba(0, 0, 0, 0.8);
-      color: #00ffff;
       border: 2px solid #fff;
-      padding: 20px;
+      padding: 15px;
       width: 200px;
       text-align: center;
       font-size: 1rem;
@@ -87,37 +69,74 @@
     footer {
       margin-top: 50px;
       font-size: 0.9rem;
-      color: #fff;
+    }
+
+    /* ธีม */
+    .theme-darkwhite {
+      background: black;
+      color: white;
+    }
+
+    .theme-whitedark {
+      background: white;
+      color: black;
+    }
+
+    .theme-firewater {
+      background: linear-gradient(to bottom, #1e90ff, #ff4500);
+      color: white;
+    }
+
+    .theme-cyber {
+      background: black;
+      color: #00ff00;
+    }
+
+    .theme-darkwhite .main-container,
+    .theme-cyber .main-container {
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    .theme-whitedark .main-container {
+      background: rgba(255, 255, 255, 0.9);
+      color: black;
+    }
+
+    .theme-firewater .main-container {
+      background: rgba(0, 0, 0, 0.6);
     }
   </style>
 </head>
-<body>
+<body class="theme-firewater"> <!-- ตั้งค่าเริ่มต้นเป็นธีม "น้ำกับไฟ" -->
+
   <div class="main-container">
     <h1>สุ่มเหตุการณ์ใน PICNIC CARTOON</h1>
     <p>กดปุ่มด้านล่างเพื่อสุ่ม</p>
     <button id="generateBtn">สุ่มเลย!</button>
+
     <div id="result-container">
       <div id="name1" class="result-box">---</div>
       <div id="action" class="result-box">---</div>
       <div id="name2" class="result-box">---</div>
     </div>
-    <hr>
-    <br>
-    <p>
-      <strong>YOUTUBE PICNIC CARTOON:</strong><br>
-      <a href="https://youtube.com/@picniccartoon?si=2KwwhL5_45kM1Btc" target="_blank">พี่ปิคนิค</a>
-    </p>
-    <p>
-      <strong>ผู้สร้างและผู้เขียนโค๊ด:</strong><br>
-      <a href="https://x.com/BAICLOVE?t=yPv2jYpxb9yVzkUiyAe36A&s=09" target="_blank">โคลเวอร์</a>
-    </p>
+
+    <hr><br>
+    
+    <p><strong>เปลี่ยนธีม:</strong></p>
+    <button onclick="changeTheme('theme-darkwhite')">ดำขาว</button>
+    <button onclick="changeTheme('theme-whitedark')">ขาวดำ</button>
+    <button onclick="changeTheme('theme-firewater')">น้ำกับไฟ</button>
+    <button onclick="changeTheme('theme-cyber')">ไซเบอร์</button>
+
+    <hr><br>
+
     <footer>
-      <p>V.0.5</p>
+      <p>V.0.6</p>
     </footer>
   </div>
 
- <script>
-  // รายการตัวละคร
+  <script>
+      // รายการตัวละคร
   const names = [
     "สมศักดิ์", "ภูวฤทธิ์", "เจษฎา", "อรุณกร", "เรืองศักดิ์", "จิรเมธ", "กฤตรัตน์",
     "คาปูชิโน่", "มัคคิอาโต้", "ลาเต้", "มอคค่า", "มานาซิโอ้", "ราซารัส", "การิคการี่",
@@ -128,7 +147,6 @@
     "มานิตย์", "ไซฟาเรียส", "เดลันเต้", "ครูวรรบวก", "คุณ", "เพน", "บอลลีวูดแมน",
     "ซินเทียน", "ชีตาห์", "พยัคฆ์สีคราม", "สอง"
   ];
-
   // รายการเหตุการณ์
   const actions = [
     "จับตูด", "ตกปลา", "ทำอาหาร", "ลูบหัว", "แอบส่องโทรศัพท์", "วาดรูปให้",
@@ -152,37 +170,42 @@
   "เช็ดน้ำตาให้", "สวมแหวนให้", "พาไปดูพลุ", "แชร์ร่มด้วยกัน", "แตะหน้าผาก", "ฟังเพลงด้วยกัน"
   ];
 
-  function randomArrayItem(array) {
-    return array[Math.floor(Math.random() * array.length)];
-  }
+    function randomArrayItem(array) {
+      return array[Math.floor(Math.random() * array.length)];
+    }
 
-  function generatePair() {
-    const name1Element = document.getElementById("name1");
-    const actionElement = document.getElementById("action");
-    const name2Element = document.getElementById("name2");
+    function generatePair() {
+      const name1Element = document.getElementById("name1");
+      const actionElement = document.getElementById("action");
+      const name2Element = document.getElementById("name2");
 
-    let interval = setInterval(() => {
-      name1Element.innerText = randomArrayItem(names);
-      actionElement.innerText = randomArrayItem(actions);
-      name2Element.innerText = randomArrayItem(names);
-    }, 100);
+      let interval = setInterval(() => {
+        name1Element.innerText = randomArrayItem(names);
+        actionElement.innerText = randomArrayItem(actions);
+        name2Element.innerText = randomArrayItem(names);
+      }, 100);
 
-    setTimeout(() => {
-      clearInterval(interval);
-      const randomName1 = randomArrayItem(names);
-      let randomName2;
-      do {
-        randomName2 = randomArrayItem(names);
-      } while (randomName1 === randomName2);
-      const randomAction = randomArrayItem(actions);
+      setTimeout(() => {
+        clearInterval(interval);
+        let randomName1 = randomArrayItem(names);
+        let randomName2;
+        do {
+          randomName2 = randomArrayItem(names);
+        } while (randomName1 === randomName2);
+        let randomAction = randomArrayItem(actions);
 
-      name1Element.innerText = randomName1;
-      actionElement.innerText = randomAction;
-      name2Element.innerText = randomName2;
-    }, 2000);
-  }
+        name1Element.innerText = randomName1;
+        actionElement.innerText = randomAction;
+        name2Element.innerText = randomName2;
+      }, 2000);
+    }
 
-  document.getElementById("generateBtn").addEventListener("click", generatePair);
-</script>
+    document.getElementById("generateBtn").addEventListener("click", generatePair);
+
+    // เปลี่ยนธีม
+    function changeTheme(theme) {
+      document.body.className = theme;
+    }
+  </script>
 </body>
 </html>
